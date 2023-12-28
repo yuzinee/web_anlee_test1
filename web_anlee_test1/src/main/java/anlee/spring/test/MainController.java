@@ -14,12 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MainController {
 	
+	// 초기화면 설정
 	@RequestMapping(value = "/", method = RequestMethod.GET)
     public String startController() {
 		
-        return "test_main"; // 이는 실제 JSP 파일의 이름에 맞게 수정해야 합니다.
+        return "test_main";
     }
 	
+	// 화면 전환 관련 컨트롤러
 	@RequestMapping("/{url}")
     public String MainController(@PathVariable("url") String url) {
        
