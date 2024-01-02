@@ -1,20 +1,79 @@
 @charset "UTF-8";
 
 :root {
-  --pink-dark : #FF9494;
-  --pink-normal : #FFD1D1;
-  --pink-light : #FFE3E1;
-  --yellow-light : #FFF5E4;
+  --pink-dark: #FF9494;
+  --pink-normal: #FFD1D1;
+  --pink-light: #FFE3E1;
+  --yellow-light: #fff7eb;
+  --yellow: #FFF5E4;
+}
+
+body {
+  background: var(--yellow-light);
+}
+
+.title h1 {
+text-align: center;
+    font-size:30px;
+    font-weight:300;
+    color:#222;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+.title h1:after,.title h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid var(--pink-dark);
+    border-top: 1px solid var(--pink-dark);
+    height: 5px;
+}
+
+.triangle_right {
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid var(--pink-dark);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.triangle_left {
+  width: 0px;
+  height: 0px;
+  border-bottom: 30px solid var(--pink-dark);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  transform: rotate( 45deg );
+}
+
+.grp_question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+}
+
+.question {
+  margin-bottom: 60px;
+  background: #FFFFFF;
+  width:30%;
+  height:40%;
+  border-radius: 10px;
+  position: relative;
 }
 
 p {
   margin-bottom: 0.5em;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-  color: #00AE68;
 }
 
 .clear {
@@ -58,19 +117,21 @@ a:visited {
     #CCC;
 }
 
-a.button {
+.button {
   display: block;
   position: relative;
   float: left;
   width: 120px;
   padding: 0;
-  margin: 10px 20px 10px 0;
+  margin: 10px 20px 10px 10px;
   font-weight: 600;
   text-align: center;
   line-height: 50px;
   color: #FFF;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all 0.2s ;
+  cursor: pointer;
+  border: none;
 }
 
 .btn_answer {
@@ -129,10 +190,6 @@ a.button {
 
 .btnFloat:before {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
-}
-
-.btnFloat:hover:before {
-  
 }
 
 .btnFloat:hover:before {
