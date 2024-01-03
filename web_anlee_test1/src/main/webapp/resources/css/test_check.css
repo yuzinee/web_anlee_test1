@@ -1,45 +1,44 @@
 @charset "UTF-8";
 
 :root {
-  --pink-dark: #FF9494;
-  --pink-normal: #FFD1D1;
-  --pink-light: #FFE3E1;
-  --yellow-light: #fff7eb;
-  --yellow: #FFF5E4;
+  --orange-dark: #FF7800;
+  --orange-light: #FFBC97;
+  --gray-light: #F7F7F7;
+  --yellow-light: #FFF5E4;
 }
 
 body {
-  background: var(--yellow-light);
+  background: var(--gray-light);
 }
 
 .title h1 {
 text-align: center;
-    font-size:30px;
-    font-weight:300;
-    color:#222;
-    letter-spacing:1px;
-    text-transform: uppercase;
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
-    margin-top: 100px;
-    font-weight: bold;
+  font-size:30px;
+  font-weight:300;
+  color:#222;
+  letter-spacing:1px;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+  margin-top: 100px;
+  font-weight: bold;
 }
 
 .title h1:after,.title h1:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid var(--pink-dark);
-    border-top: 1px solid var(--pink-dark);
-    height: 5px;
+  content: " ";
+  display: block;
+  border-bottom: 1px solid var(--orange-dark);
+  border-top: 1px solid var(--orange-dark);
+  height: 5px;
 }
 
 .triangle_right {
   width: 0px;
   height: 0px;
-  border-top: 30px solid var(--pink-dark);
+  border-top: 30px solid var(--orange-dark);
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
 }
@@ -47,7 +46,7 @@ text-align: center;
 .triangle_left {
   width: 0px;
   height: 0px;
-  border-bottom: 30px solid var(--pink-dark);
+  border-bottom: 30px solid var(--orange-dark);
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   transform: rotate( 45deg );
@@ -111,10 +110,7 @@ p {
 .container {
   padding-top: 1em;
   margin-top: 1em;
-  border-top: 
-    solid
-    1px
-    #CCC;
+  border-top: solid 1px #CCC;
 }
 
 .button {
@@ -134,18 +130,18 @@ p {
   border: none;
 }
 
-.btn_answer {
-  background: var(--pink-dark);
+.btn_style1 {
+  background: var(--orange-dark);
 }
 
 /* FADE */
-.btnFade.btn_answer:hover {
+.btnFade.btn_style1:hover {
   background: #FF8E00;
 }
 
 /* 3D */
-.btn_answer.btnPush {
-  box-shadow: 0px 5px 0px 0px var(--pink-light);
+.btn_style1.btnPush {
+  box-shadow: 0px 5px 0px 0px var(--orange-light);
 }
 
 .btnPush:hover {
@@ -153,17 +149,17 @@ p {
   margin-bottom: 5px;
 }
 
-.btn_answer.btnPush:hover {
-  box-shadow: 0px 0px 0px 0px var(--pink-light);
+.btn_style1.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px var(--orange-light);
 }
 
 /* BORDER */
-.btn_answer.btnBorder {
-  box-shadow: 0px 0px 0px 0px var(--pink-light);
+.btn_style1.btnBorder {
+  box-shadow: 0px 0px 0px 0px var(--orange-light);
 }
 
-.btn_answer.btnBorder:hover {
-  box-shadow: 0px 0px 0px 5px var(--pink-light);
+.btn_style1.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px var(--orange-light);
 }
 
 /* FLOAT */
@@ -184,8 +180,8 @@ p {
   transition: all 0.2s ;
 }
 
-.btn_answer.btnFloat:before {
-  background: var(--pink-dark);
+.btn_style1.btnFloat:before {
+  background: var(--orange-dark);
 }
 
 .btnFloat:before {
@@ -218,8 +214,8 @@ p {
   border-radius: 5px;
 }
 
-.btnSlide.btn_answer .top {
-  background: var(--pink-dark);
+.btnSlide.btn_style1 .top {
+  background: var(--orange-dark);
 }
 
 .btnSlide .bottom {
