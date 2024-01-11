@@ -10,16 +10,20 @@
 </head>
 
 <body>
-  <div class="title">
-	<h1 style="margin-top:100px" id="question_num" style="text-align: center;">-</h1>
-  </div>	
-  <div class="grp_question">
-  	<div class="question" id="question" style="">Question</div>
-  	<button class="button btnPush btn_style1" id="answer1" onclick="btn_answer_onclick(1)" style="width:30%;">A1</button>
-  	<button class="button btnPush btn_style1" id="answer2" onclick="btn_answer_onclick(2)" style="width:30%;">A2</button>
-  	<button class="button btnPush btn_style1" id="result" onclick="btn_result_onclick()" style="width:30%;">쿠팡 후 결과 보기</button>
-  </div>
+  <form id="form_result" action="/test_result" method="post">
+    <div class="title">
+      <h1 style="margin-top:100px" id="question_num" style="text-align: center">-</h1>
+    </div>	
+    <div class="grp_question">
+      <div class="question" id="question" style="">Question</div>
+      <button type="button" class="button btnPush btn_style1" id="answer1" onclick="btn_answer_onclick(1)" style="width:30%;">A1</button>
+      <button type="button" class="button btnPush btn_style1" id="answer2" onclick="btn_answer_onclick(2)" style="width:30%;">A2</button>
+      <button type="button" class="button btnPush btn_style1" id="btn_result" onclick="btn_result_onclick()" style="width:30%;">결과 확인하러 가기</button>
+    </div>
+    <input type="hidden" name="ibx_result" id="ibx_result" value=''>
+  </form>
 </body>
+
 <script>
 	/**
 	 * @Description : 심리테스트 문항
@@ -41,6 +45,7 @@
     var scoreJ = 0;
     var scoreP = 0;
     
+    // 결과
     var result = "";
     
  	// 질문
@@ -96,24 +101,16 @@
 	    $("#question").text(arrQuestion[currentNumber - 1]);
 	    $("#answer1").text(arrAnswer1[currentNumber - 1]);
 	    $("#answer2").text(arrAnswer2[currentNumber - 1]); 
-	    $("#result").hide();
+	    $("#btn_result").hide();
 	});
 	
  	// btn_answer onclick event
 	function btn_answer_onclick(score) {
+
     		// 마지막 문항까지 선택했을 경우
 		if(currentNumber >= totalQuestions) {
-// 			window.location.href = 'http://localhost:8081/test_result';
-
 			// 심리테스트 결과
 			score_result();
-			
-			// 컴포넌트 세팅
-			$("#question_num").text("결과");
-			$("#question").hide();
-			$("#answer1").hide();
-		    $("#answer2").hide();
-		    $("#result").show();
 			
 			return false;
 		}
@@ -128,17 +125,12 @@
 		$("#question").text(arrQuestion[currentNumber - 1]);
 	    $("#answer1").text(arrAnswer1[currentNumber - 1]);
 	    $("#answer2").text(arrAnswer2[currentNumber - 1]);
-	    
-	    console.log(scoreE);
-	    console.log(scoreI);
-	    console.log(scoreS);
-	    console.log(scoreN);
-	    console.log(scoreF);
-	    console.log(scoreT);
-	    console.log(scoreJ);
-	    console.log(scoreP);
-	    console.log("---");
 	}
+ 	
+ 	// btn_result onclick event
+ 	function btn_result_onclick() {
+ 		$("#form_result").submit();
+ 	}
  	
  	// 점수 계산
  	function score_calculation(currentNumber, score) {
@@ -201,7 +193,13 @@
  		    result += "P";
  		}
  		
- 		console.log(result);
+ 	 	// 컴포넌트 세팅
+		$("#question_num").text("결과");
+		$("#question").hide();
+		$("#answer1").hide();
+	    $("#answer2").hide();
+	    $("#btn_result").show();
+	    $("#ibx_result").val(result);
  	}
 </script>
 </html>
