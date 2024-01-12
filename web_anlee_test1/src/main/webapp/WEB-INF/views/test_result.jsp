@@ -15,8 +15,8 @@
       <h1 style="margin-top:100px" id="question_num" style="text-align: center">결과</h1>
     </div>	
 	<div class="grp_border_box">
-      <div class="border_box" id="result" style="">-</div>
-      <div class="border_box" id="test" style="">-</div>
+      <div class="border_box" id="resultInfo" style="">-</div>
+      <div class="border_box" id="resultCombination" style="">-</div>
       <button type="button" class="button btnPush btn_style1" id="btn_share" onclick="openPopup()" style="width:30%;">공유하기</button>
       <button type="button" class="button btnPush btn_style1" id="btn_reset" onclick="btn_reset_onclick()" style="width:30%;">다시하기</button>
     </div>
