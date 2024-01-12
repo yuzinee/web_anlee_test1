@@ -23,7 +23,7 @@ public class MainController {
 	
 	// 화면 전환 관련 컨트롤러
 	@RequestMapping("/{url}")
-    public String MainController(@PathVariable("url") String url) {
+    public String otherController(@PathVariable("url") String url) {
        
         return url;
     }

@@ -4,7 +4,11 @@
   --orange-dark: #FF7800;
   --orange-light: #FFBC97;
   --gray-light: #F7F7F7;
+  --gray-first: #E9E9E9;
+  --gray-second: #D3D3D3;
   --yellow-light: #FFF5E4;
+  --blue-fisrt: #0067A3;
+  --blue-second: #DCE4F0;
 }
 
 body {
@@ -30,6 +34,12 @@ h1 {
   text-align: center;
 }
 
+.bottom {
+  width: 60%;
+  margin: 10px auto;
+  text-align: center;
+}
+
 .middle img {
   width: 100%;
   height: auto;
@@ -37,13 +47,7 @@ h1 {
   margin: 0 auto;
 }
 
-.bottom {
-  width: 100%;
-  margin: 10px auto;
-  text-align: center;
-}
-
-.btn_black {
+.btn_concave_text {
   width: 60%;
   height: 60px;
   color: #000000;
@@ -55,12 +59,13 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
   font-weight: bold;
+  margin: 0 auto;
+  display: inline-block;
 }
 
 .btn_concave {
@@ -73,9 +78,26 @@ h1 {
   height: 0%;
   width: 2px;
 }
+
 .btn_concave:hover {
   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
               -4px -4px 6px 0 rgba(116, 125, 136, .5), 
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.btn_change_text {
+  width: 10%;
+  height: 60px;
+  border-radius: 15px;
+  float: right;
+}
+
+.btn_change {
+  background: var(--gray-first);
+  border: none;
+}
+
+.btn_change:hover {
+  background: var(--gray-second);
 }
