@@ -1,9 +1,3 @@
-	/**
-	 * @Description : 심리테스트 문항
-	 * @author 이유진
-	 * @since 2023.12.28.
-	 */
-	
 	$(document).ready(function() {
 			// session이 만료되었을 시 첫 페이지로 이동
 	// 		if(sessionStorage.getItem("sessionInfo") != "Y") {

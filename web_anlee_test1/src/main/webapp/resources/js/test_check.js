@@ -1,9 +1,3 @@
-	/**
-	 * @Description : 심리테스트 문항
-	 * @author 이유진
-	 * @since 2023.12.28.
-	 */
-	
 	// 문항 번호
 	var currentNumber = 1;
     var totalQuestions = 12;
