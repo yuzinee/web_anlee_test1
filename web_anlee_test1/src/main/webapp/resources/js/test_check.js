@@ -64,12 +64,12 @@
 	
 	$(document).ready(function() {
 		// session이 만료되었을 시 첫 페이지로 이동
-// 		if(sessionStorage.getItem("sessionInfo") != "Y") {
-// 			alert("잘못된 접근입니다.");
-// 			location.href="/test_start";
+ 		if(sessionStorage.getItem("sessionInfo") != "Y") {
+ 			alert("잘못된 접근입니다.");
+ 			location.href="/test_start";
 			
-// 			return false;
-// 		}
+ 			return false;
+ 		}
 		
 	    // 초기 세팅
 	    $("#question_num").text(currentNumber + " / " + totalQuestions);
@@ -81,7 +81,6 @@
 	
  	// btn_answer onclick event
 	function btn_answer_onclick(score) {
-
     		// 마지막 문항까지 선택했을 경우
 		if(currentNumber >= totalQuestions) {
 			// 심리테스트 결과

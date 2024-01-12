@@ -1,45 +1,76 @@
 	$(document).ready(function() {
-			// session이 만료되었을 시 첫 페이지로 이동
-	// 		if(sessionStorage.getItem("sessionInfo") != "Y") {
-	// 			alert("잘못된 접근입니다.");
-	// 			location.href="/test_start";
-				
-	// 			return false;
-	// 		}
+		// 결과 표시
+		result();
+
+		// session이 만료되었을 시 첫 페이지로 이동
+ 		if(sessionStorage.getItem("sessionInfo") != "Y") {
+ 			alert("잘못된 접근입니다.");
+ 			location.href="/test_start";
 			
-		// 파라미터로 받은 심리테스트 결과 변수
-		var questionResult = '<%=questionResult %>';
-		$("#result").text("결과: " + questionResult);
+ 			return false;
+ 		}
 	});
-	 
-	// 카카오톡 공유하기
-	Kakao.init('08628cbaedbcd09fc0864713ac4bc22b'); // kakao developers JavaScript key	
 	
-	Kakao.Link.createScrapButton({
-       container: '#btn_share',
-       requestUrl: 'http://localhost:8081/',
-       templateId : 102339
-    });
+	// 결과에 따른 설명 보여주기
+	function result() {
+		switch(questionResult) {
+			case 'ISTJ' :
+				$("#result").text("결과: 1");
+				break;
+			case 'ISTP' :
+				$("#result").text("결과: 2");
+				break;
+			case 'ISFJ' :
+				$("#result").text("결과: 3");
+				break;
+			case 'ISFP' :
+				$("#result").text("결과: 4");
+				break;
+			case 'INTJ' :
+				$("#result").text("결과: 5");
+				break;
+			case 'INTP' :
+				$("#result").text("결과: 6");
+				break;
+			case 'INFJ' :
+				$("#result").text("결과: 7");
+				break;
+			case 'INFP' :
+				$("#result").text("결과: 8");
+				break;
+			case 'ESTJ' :
+				$("#result").text("결과: 9");
+				break;
+			case 'ESTP' :
+				$("#result").text("결과: 10");
+				break;
+			case 'ESFJ' :
+				$("#result").text("결과: 11");
+				break;
+			case 'ESFP' :
+				$("#result").text("결과: 12");
+				break;
+			case 'ENTJ' :
+				$("#result").text("결과: 13");
+				break;
+			case 'ENTP' :
+				$("#result").text("결과: 14");
+				break;
+			case 'ENFJ' :
+				$("#result").text("결과: 15");
+				break;
+			case 'ENFP' :
+				$("#result").text("결과: 16");
+				break;
+		}
+	}
 	
-	// url 복사 버튼 클릭
-	function btn_url_onclick() {
-		var url = "test"; // 복사할 url
-
-		// 임시 컴포넌트 생성 후 url 값 저장
-		var inputUrl = document.createElement("input");
-		inputUrl.value = url;
-		document.body.appendChild(inputUrl);
-		inputUrl.select();
-
-		// 클립보드에 복사 후 삭제
-		document.execCommand('copy');
-		document.body.removeChild(inputUrl);
-
-		alert("링크가 복사되었습니다.");
+	// 공유하기 버튼 클릭
+	function openPopup(){
+		window.open("pop_share", "", "width=600px, height=300px");
 	}
 	
 	// 다시하기 버튼 클릭
 	function btn_reset_onclick() {
-		
-		location.href="/test_main"
+		location.href="/test_start";
 	}

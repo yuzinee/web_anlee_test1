@@ -52,7 +52,7 @@ text-align: center;
   transform: rotate( 45deg );
 }
 
-.grp_question {
+.grp_border_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,7 +62,7 @@ text-align: center;
   margin: 0;
 }
 
-.question {
+.border_box {
   margin-bottom: 60px;
   background: #FFFFFF;
   width:30%;
