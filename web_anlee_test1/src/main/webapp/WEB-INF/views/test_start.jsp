@@ -1,8 +1,3 @@
-<!--
-     * @Description : 심리테스트 시작화면
-     * @author 안상현
-     * @since 2024.01.03
--->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
@@ -22,17 +17,8 @@
     <img src="/resources/img/simpleimage.png">
   </div>
   <div class="bottom">
-    <button class="btn_black btn_concave"id="btn_reset" onclick="btn_onclick()">
-    테스트 시작
-    </button>
+    <button class="btn_concave_text btn_concave"id="btn_reset" onclick="btn_onclick()">테스트 시작</button>
+    <button class="btn_change_text btn_change" id="btn_public">공유하기</button>
   </div>
-
 </body>
 </html>
-
-<script>
-function btn_onclick() {
-	sessionStorage.setItem("sessionInfo", "Y");
-    location.href="/test_check"
- }
-</script>
