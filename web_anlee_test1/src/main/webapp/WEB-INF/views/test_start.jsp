@@ -15,14 +15,14 @@
   <script src="/resources/js/test_start.js"></script>
 </head>
 <body>
-  <div class="frame">
+  <div class="top">
     <h1 class="title">설연휴 심리테스트</h1>
   </div>
-    <div class="cover">
+  <div class="middle">
     <img src="/resources/img/simpleimage.png">
   </div>
-  <div class="frame">
-    <button class="custom-btn btn-2"id="btn_reset" onclick="btn_onclick()">
+  <div class="bottom">
+    <button class="btn_black btn_concave"id="btn_reset" onclick="btn_onclick()">
     테스트 시작
     </button>
   </div>
