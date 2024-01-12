@@ -18,30 +18,32 @@ h1 {
   font-size: 50px;
 }
 
-.cover {
+.top {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.middle {
   max-width: 60%;
   margin: 0 auto;
   text-align: center;
 }
 
-.cover img {
+.middle img {
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-.frame {
-  width: 90%;
-  margin: 40px auto;
+.bottom {
+  width: 100%;
+  margin: 10px auto;
   text-align: center;
 }
 
-button {
-  margin: 20px;
-}
-
-.custom-btn {
+.btn_black {
   width: 60%;
   height: 60px;
   color: #000000;
@@ -61,17 +63,17 @@ button {
   font-weight: bold;
 }
 
-.btn-2 {
+.btn_concave {
   background: rgb(96,9,240);
   background: linear-gradient(0deg, var(--orange-dark) 0%, var(--orange-light) 100%);
   border: none;
   
 }
-.btn-2:before {
+.btn_concave:before {
   height: 0%;
   width: 2px;
 }
-.btn-2:hover {
+.btn_concave:hover {
   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
               -4px -4px 6px 0 rgba(116, 125, 136, .5), 
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
