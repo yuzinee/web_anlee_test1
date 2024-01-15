@@ -22,32 +22,20 @@ h1 {
   font-size: 50px;
 }
 
-.top {
-  width: 90%;
+.display {
+  width: 40%;
   margin: 40px auto;
   text-align: center;
 }
 
-.middle {
-  max-width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.bottom {
-  width: 60%;
-  margin: 10px auto;
-  text-align: center;
-}
-
-.middle img {
+img {
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-.btn_concave_text {
+.btn_concave {
   width: 60%;
   height: 60px;
   color: #000000;
@@ -55,7 +43,6 @@ h1 {
   padding: 10px 25px;
   font-weight: 500;
   font-size: 120%;
-  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -66,14 +53,11 @@ h1 {
   font-weight: bold;
   margin: 0 auto;
   display: inline-block;
-}
-
-.btn_concave {
   background: rgb(96,9,240);
   background: linear-gradient(0deg, var(--orange-dark) 0%, var(--orange-light) 100%);
   border: none;
-  
 }
+
 .btn_concave:before {
   height: 0%;
   width: 2px;
@@ -86,18 +70,22 @@ h1 {
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
-.btn_change_text {
+.btn_public {
   width: 10%;
   height: 60px;
   border-radius: 15px;
   float: right;
-}
-
-.btn_change {
-  background: var(--gray-first);
   border: none;
 }
 
-.btn_change:hover {
+.btn_public:hover {
   background: var(--gray-second);
+}
+
+@media (max-width: 600px) {
+  .display {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+  }
 }
