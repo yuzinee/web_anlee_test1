@@ -1,5 +1,6 @@
 package anlee.spring.test;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,29 +21,67 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MainController {
 	
-	// 초기화면 설정
+	@Autowired
+	MainService mainService;
+	
+	// 메인화면
 	@RequestMapping(value = "/", method = RequestMethod.GET)
     public String startController() {
 		
         return "test_main";
     }
 	
-	// 화면 전환 관련 컨트롤러
+	// 화면 전환
 	@RequestMapping("/{url}")
     public String otherController(@PathVariable("url") String url) {
        
         return url;
     }
-	
-	// SELECT
-	
-	@Autowired
-	MainService mainService;
 
-	@RequestMapping(value = "/test_result/test", method = RequestMethod.POST, consumes = "application/json")
+	// 단건 조회
+	@RequestMapping(value = "/test/selectOne", method = RequestMethod.POST, consumes = "application/json")
     @ResponseBody 
-    public Map<String, Object> select(@RequestBody Map<String, Object> selectMap) throws Exception {
-        Map<String, Object> selectInfo = mainService.selectInfo("mainDAO.selectQuestion", selectMap);
+    public Map<String, Object> selectOne(@RequestBody Map<String, Object> selectMap) throws Exception {
+		String queryId = (String) selectMap.get("queryId"); // 쿼리 ID
+        Map<String, Object> selectInfo = mainService.selectOne(queryId, selectMap);
+        
         return selectInfo;
+    }
+	
+	// 리스트 조회
+	@RequestMapping(value = "/test/selectList", method = RequestMethod.POST, consumes = "application/json")
+    @ResponseBody 
+    public List<Object> selectList(@RequestBody Map<String, Object> selectMap) throws Exception {
+		String queryId = (String) selectMap.get("queryId"); // 쿼리 ID
+		List<Object> selectInfo = mainService.selectList(queryId, selectMap);
+        
+        return selectInfo;
+    }
+	
+	// 등록
+	@RequestMapping(value = "/test/insert", method = RequestMethod.POST, consumes = "application/json")
+    @ResponseBody 
+    public void insert(@RequestBody Map<String, Object> insertMap) throws Exception {
+		String queryId = (String) insertMap.get("queryId"); // 쿼리 ID
+		
+		mainService.insert(queryId, insertMap);
+    }
+	
+	// 수정
+	@RequestMapping(value = "/test/update", method = RequestMethod.POST, consumes = "application/json")
+    @ResponseBody 
+    public void update(@RequestBody Map<String, Object> updateMap) throws Exception {
+		String queryId = (String) updateMap.get("queryId"); // 쿼리 ID
+		
+		mainService.update(queryId, updateMap);
+    }
+	
+	// 삭제
+	@RequestMapping(value = "/test/delete", method = RequestMethod.POST, consumes = "application/json")
+    @ResponseBody 
+    public void delete(@RequestBody Map<String, Object> deleteMap) throws Exception {
+		String queryId = (String) deleteMap.get("queryId"); // 쿼리 ID
+		
+		mainService.delete(queryId, deleteMap);
     }
 }

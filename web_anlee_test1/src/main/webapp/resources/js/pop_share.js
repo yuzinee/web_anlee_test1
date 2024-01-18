@@ -1,3 +1,4 @@
+
 	$(document).ready(function() {
 		//카카오톡 공유하기
 		Kakao.init('08628cbaedbcd09fc0864713ac4bc22b'); // kakao developers JavaScript key	
