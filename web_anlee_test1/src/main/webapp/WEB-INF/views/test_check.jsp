@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/resources/css/test_basic.css">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="/resources/js/common.js"></script>
 <script src="/resources/js/test_check.js"></script>
 <title>테스트</title>
 </head>
@@ -24,4 +25,8 @@
     <input type="hidden" name="ibx_result" id="ibx_result" value=''>
   </form>
 </body>
+
+<script>
+	
+</script>
 </html>
