@@ -8,12 +8,7 @@
 //  			return false;
 //  		}
 		
-		var params = {
-			"queryId" : "testCheckDAO.selectQuestion"
-		  , "testSn" : "test3"
-		}
 		
-		com_selectOne(params);
  		
 		// 결과 표시
 		result();

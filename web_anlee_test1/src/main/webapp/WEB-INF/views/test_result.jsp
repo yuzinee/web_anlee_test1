@@ -22,11 +22,20 @@
       <button type="button" class="button btnPush btn_style1" id="btn_reset" onclick="btn_reset_onclick()" style="width:30%;">다시하기</button>
     </div>
 </body> 
-<%
+<% 
   	String questionResult = request.getParameter("ibx_result");
 %>
 <script>
-	//파라미터로 받은 심리테스트 결과 변수
+	// 파라미터로 받은 테스트 결과 변수
 	var questionResult = '<%= questionResult %>';
+	
+	var params = {
+			"queryId" : "testCheckDAO.selectQuestion"
+		  , "testSn" : "test3"
+		}
+		
+	com_selectOne(params, function(responseData) {
+		console.log(responseData);
+	});
 </script>
 </html>
