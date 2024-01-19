@@ -41,6 +41,6 @@ public class MainDAO {
 	// 삭제
 	public void delete(String queryId, Map<String, Object> deleteMap) {
 		
-		sqlSession.update(queryId, deleteMap);
+		sqlSession.delete(queryId, deleteMap);
 	}
 }
