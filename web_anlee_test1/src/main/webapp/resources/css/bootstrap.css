@@ -4245,7 +4245,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: #000000;
   pointer-events: none;
   cursor: default;
 }
@@ -4276,7 +4276,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #000000;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -4294,7 +4294,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #007bff;
+  background-color: #d3d3d3;
 }
 
 .nav-fill .nav-item {
