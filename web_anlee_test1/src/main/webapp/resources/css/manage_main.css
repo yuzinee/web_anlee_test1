@@ -18,6 +18,7 @@ main {
 }
 
 a {
+  cursor: default;
   color: black;
 }
 
