@@ -10,7 +10,7 @@
 </head>
 <body class="bg-body-tertiary" cz-shortcut-listen="true" style="font-size: 18px">
 	<main class="container">
-	  <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm" style="background : #a3a3a3">
+	  <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm" style="background:#5a6268">
 	  	<div class="lh-1">
 	      <h1 class="h6 mb-0 text-white lh-1">Test Manage</h1>
 	    </div>
