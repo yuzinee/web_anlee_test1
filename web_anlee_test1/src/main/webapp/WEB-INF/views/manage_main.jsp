@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <title>manage</title>
     <link href="/resources/css/bootstrap.css" rel="stylesheet">
-    <link href="/resources/css/sidebars.css" rel="stylesheet">
+    <link href="/resources/css/manage_main.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="/resources/js/sidebars.js"></script>
+    <script src="/resources/js/manage_main.js"></script>
   </head>
   <body>
     <main class="d-flex flex-nowrap">
@@ -19,52 +19,56 @@
             <strong>관리자이름</strong>
           </a>
           <ul class="dropdown-menu text-small shadow">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">뭐넣을까</a></li>
+            <li><a class="dropdown-item" href="#">넣을게 있긴한가</a></li>
+            <li><a class="dropdown-item" href="#">없는듯</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="#">로그아웃</a></li>
           </ul>
         </div>
         <ul class="nav nav-pills flex-column mb-auto">
           <hr>
           <li>
-            <a href="#" class="nav-link active">
-              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+            <a class="nav-link active" onclick="loadContent('manage_stats')">
+              <svg class="bi pe-none me-2" width="16" height="16"></svg>
                         통계
             </a>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
-            <a href="#" class="nav-link">
-              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                        게시글 관리
+            <a class="nav-link" onclick="loadContent('manage_test')">
+              <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                        테스트 관리
             </a>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
-            <a href="#" class="nav-link">
-              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+            <a class="nav-link" onclick="loadContent('manage_setting')">
+              <svg class="bi pe-none me-2" width="16" height="16"></svg>
                          설정
             </a>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
-            <a href="#" class="nav-link">
-              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                         설정
+            <a class="nav-link" onclick="loadContent('manage_blink')">
+              <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                         준비중
             </a>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
-            <a href="#" class="nav-link">
-              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                         설정
+            <a class="nav-link" onclick="loadContent('manage_trash')">
+              <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                         쓰레기
             </a>
           </li>
         </ul>
       </div>
       <div class="b-example-divider b-example-vr"></div>
+      <!-- 화면 띄우기 -->
+      <div id="loadJSP">
+
+      </div>
     </main>
   <body>
 </html>

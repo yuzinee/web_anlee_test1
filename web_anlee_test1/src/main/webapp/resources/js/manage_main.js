@@ -17,4 +17,14 @@ $(document).ready(function() {
       $('.dropdown-menu').removeClass('show');
     }
   });
+  
+  loadContent('manage_stats');
 });
+
+// jsp 화면 띄우기
+function loadContent(url) {
+  fetch(url)
+    .then(response => response.text())
+    .then(data => document.getElementById("loadJSP").innerHTML = data)
+    .catch(error => console.error(url + " 로드 오류:", error));
+}
