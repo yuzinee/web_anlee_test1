@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <title>통계</title>
 </head>
 <body>
-나는 통계얌
+  <div>
+    <canvas id="lineChart"></canvas>
+  </div>
 </body>
 </html>
