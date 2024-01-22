@@ -53,3 +53,11 @@ a {
 .scrollarea {
   overflow-y: auto;
 }
+
+/*********************
+차트화면
+***********************/
+canvas {
+  display: black;
+  margin: 20px auto;
+}

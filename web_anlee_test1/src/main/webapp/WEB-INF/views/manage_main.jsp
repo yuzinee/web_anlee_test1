@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <title>manage</title>
     <link href="/resources/css/bootstrap.css" rel="stylesheet">
-    <link href="/resources/css/manage_main.css" rel="stylesheet">
+    <link href="/resources/css/manage.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="/resources/js/manage_main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/resources/js/manage.js"></script>
   </head>
   <body>
     <main class="d-flex flex-nowrap">
@@ -67,7 +68,6 @@
       <div class="b-example-divider b-example-vr"></div>
       <!-- 화면 띄우기 -->
       <div id="loadJSP">
-
       </div>
     </main>
   <body>
