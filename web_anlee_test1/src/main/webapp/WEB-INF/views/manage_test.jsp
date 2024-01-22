@@ -32,7 +32,6 @@
 </body>
 
 <script>
-
 	$(document).ready(function() {	
 		// 질문 조회
 		var testParam = {
@@ -51,27 +50,36 @@
 					useAt = "hiddenTest";	// Hidden Test 그룹에 추가
 				}
 				
-				var html1 = "";	
+				var html = "";	
 				
-				html1 += "<div class='d-flex text-body-secondary pt-3'>";
-				html1 += "<p class='pb-3 mb-0 small lh-sm border-bottom'>";
-				html1 += "<strong class='d-block text-gray-dark' style='margin-bottom:5px'>"+arrTest[i].TEST_NM+"</strong>";
-				html1 += "일 방문자 수: " + arrTest[i].COUNT + "명, 총 방문자 수: " + arrTest[i].TOTAL_COUNT + "명";
-				html1 += "</p>"
-				html1 += "</div>"
+				html += "<div class='d-flex text-body-secondary pt-3'>";
+				html += "<p class='pb-3 mb-0 small lh-sm border-bottom'>";
+				html += "<strong class='d-block text-gray-dark' style='margin-bottom:5px'>"+arrTest[i].TEST_NM+"</strong>";
+				html += "일 방문자 수: " + arrTest[i].COUNT + "명, 총 방문자 수: " + arrTest[i].TOTAL_COUNT + "명";
+				html += "</p>"
+				html += "</div>"
 				
-				$("#"+useAt).append(html1);
+				$("#"+useAt).append(html);
 			}
 			
 			// 맨 밑에 Text 추가
-			var html2 = "";	
+			var htmlY = "";	
 			
-			html2 += "<small class='d-block text-end mt-3'>";
-			html2 += "<a href='#'>Hide Management..</a>";
-			html2 += "</small>";
+			htmlY += "<small class='d-block text-end mt-3'>";
+// 			htmlY += "<a href='/manage_create?useAt=Y'>Hide Management..</a>";
+			htmlY += "<a href='#'>Hide Management..</a>";
+			htmlY += "</small>";
 			
-			$("#usingTest").append(html2);
-			$("#hiddenTest").append(html2);		
+			$("#usingTest").append(htmlY);
+			
+			var htmlN = "";	
+			
+			htmlN += "<small class='d-block text-end mt-3'>";
+// 			htmlN += "<a href='/manage_create?useAt=N'>Hide Management..</a>";
+			htmlN += "<a href='#'>Hide Management..</a>";
+			htmlN += "</small>";
+			
+			$("#hiddenTest").append(htmlN);		
 		});  
 	});
 
