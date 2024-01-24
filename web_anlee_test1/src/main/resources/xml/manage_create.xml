@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="manageCreateDAO">
-	
+
+	<!-- TEST_SN MAX 값 조회 -->
 	<select id="selectTestSn" resultType="Map" parameterType="String">
 	    SELECT TEST_SN
 		FROM TB_INFO
@@ -10,7 +10,63 @@
 		LIMIT 1
 	</select>
 	
+	<!-- TEST 정보 등록 -->
+	<insert id="insertTest">
+	    INSERT INTO TB_INFO
+	    (
+	        TEST_SN
+	      , TEST_NM
+	      , USE_AT
+	    ) 
+	    VALUES
+        (
+            #{insertParams[0].testSn}
+          , #{insertParams[0].title}
+          , "Y"
+        )
+	</insert>
+	
+	<!-- 질문 등록 -->
 	<insert id="insertQuestions">
-	    
+	    INSERT INTO TB_QUESTION
+	    (
+	        TEST_SN
+	      , QSTN_SN
+	      , QSTN_CNTNT
+	    ) 
+	    VALUES
+	    <foreach collection="insertParams" item="item" index="index" separator=",">
+        (
+            #{item.testSn}
+          , #{item.qstnSn}
+          , #{item.qstnCntnt}
+        )
+	    </foreach>
+	</insert>
+	
+	<!-- 답변 등록 -->
+	<insert id="insertAnswers">
+	    INSERT INTO TB_ANSWER
+	    (
+	        QSTN_SN
+	      , ANS_SN1
+	      , ANS_CNTNT1
+	      , ANS_VAL1
+	      , ANS_SN2
+	      , ANS_CNTNT2
+	      , ANS_VAL2
+	    ) 
+	    VALUES
+	    <foreach collection="insertParams" item="item" index="index" separator=",">
+        (
+            #{item.qstnSn}
+          , #{item.ansSn1}
+          , #{item.ansCntnt1}
+          , #{item.ansVal1}
+          , #{item.ansSn2}
+          , #{item.ansCntnt2}
+          , #{item.ansVal2}
+        )
+	    </foreach>
 	</insert>
 </mapper>

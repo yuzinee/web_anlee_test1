@@ -131,34 +131,50 @@
 	
 	// Save 버튼 클릭
 	function btn_save_onclick() {
+		// TEST_SN MAX 값 추출
 		param = {
 			"queryId" : "manageCreateDAO.selectTestSn"
 		};
 		
 		com_selectOne(param, function (result){
-			var formData = [];
-			var testSn = "test" + (parseInt(result.TEST_SN.slice(4))+1);
+			// 테스트 정보ㆍ질문ㆍ답변 등록
+			var formData = [];											// insert 파라미터
+			var testSn = "test" + (parseInt(result.TEST_SN.slice(4))+1);	// 테스트 일련번호
 			
 			for(var i=1; i<qstnNum; i++){
 				qntnInfo = {
-					 "testSn"	: testSn
-				   ,	 "title" 	: $("#inp_title").val()
-				   , "qntn1" 	: $('#inp_question' + i).val()
-				   , "ans1" 		: $('#inp_answer' + i + '_1').val()
-				   , "ansVal1" 	: $('#sbx_answer' + i + '_1').val()
-				   , "ans2" 		: $('#inp_answer' + i + '_2').val()
-				   , "ansVal2" 	: $('#sbx_answer' + i + '_2').val() 
+					 "testSn"	: testSn									// 테스트 일련번호
+				   ,	 "title"		: $("#inp_title").val()					// 테스트 제목
+				   , "qstnSn"	: testSn + "_" + i						// 질문 일련번호
+				   , "qstnCntnt"	: $('#inp_question' + i).val()			// 질문 내용
+				   , "ansSn1"	: testSn + "_" + i + "_1" 				// 답변1 일련번호
+				   , "ansCntnt1"	: $('#inp_answer' + i + '_1').val()		// 답변1 내용
+				   , "ansVal1" 	: $('#sbx_answer' + i + '_1').val()		// 답변1 값
+				   , "ansSn2"	: testSn + "_" + i + "_2" 				// 답변2 일련번호
+				   , "ansCntnt2"	: $('#inp_answer' + i + '_2').val()		// 답변2 내용
+				   , "ansVal2" 	: $('#sbx_answer' + i + '_2').val() 		// 답변2 값
 				}
 				
 				formData.push(qntnInfo);
 			}
 			
-			insertParams = {
-				"queryId" : ""
-			  , "insertParams" : formData
+			var insertParams = {
+				"insertParams" : formData
 			}
 			
-			console.log(insertParams)
+			$.ajax({
+			    url: "/manage/create",
+			    type: "POST",
+			    contentType: "application/json",
+			    data: JSON.stringify(insertParams),
+			    success: function (responseData) {
+			    		alert("테스트가 생성되었습니다.");
+			    },
+			    error: function (result) {
+			        alert("error");
+			    }
+			});
+
 		});
 		
 		// 유효성 검사
