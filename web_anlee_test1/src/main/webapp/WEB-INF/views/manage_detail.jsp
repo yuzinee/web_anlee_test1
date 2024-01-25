@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="/resources/js/common.js"></script>
+    <script src="/resources/js/manage_detail.js"></script>
     <title>test</title>
     <link rel="canonical" href="https://getbootstrap.kr/docs/5.3/examples/checkout/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
