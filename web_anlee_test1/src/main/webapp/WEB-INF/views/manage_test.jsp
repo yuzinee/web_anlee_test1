@@ -31,8 +31,4 @@
 	  <button class="btn btn-secondary my-2" id="btn_create" style="float: right" onclick="btn_create_onclick()">Create Test</button>
 	</main>
 </body>
-
-<script>
-	
-</script>
 </html>

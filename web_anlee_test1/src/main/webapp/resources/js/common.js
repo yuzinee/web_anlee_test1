@@ -139,3 +139,14 @@
 		});
 	}
 	
+	// 파라미터 받는 함수(GET)
+	function com_getParameter(key) {
+		// 현재 URL "?" 이후 부분
+	    var urlParams = new URLSearchParams(window.location.search);
+	    
+	    // key에 해당하는 값 가져오기
+	    var paramValue = urlParams.get(key);
+
+	    return paramValue;
+	}
+	

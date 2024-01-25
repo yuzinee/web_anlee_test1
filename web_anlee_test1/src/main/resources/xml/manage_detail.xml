@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="manageDetailDAO">
+	<!-- 테스트 상세 조회 -->
+	<select id="selectTestDetail" resultType="Map" parameterType="String">
+	    SELECT TI.TEST_NM 
+			 , TQ.QSTN_SN 
+			 , TQ.QSTN_CNTNT 
+			 , TA.ANS_SN1
+			 , TA.ANS_CNTNT1 
+			 , TA.ANS_VAL1 
+			 , TA.ANS_SN2
+			 , TA.ANS_CNTNT2 
+			 , TA.ANS_VAL2 
+		FROM TB_INFO TI
+		JOIN TB_QUESTION TQ ON TI.TEST_SN = TQ.TEST_SN 
+		JOIN TB_ANSWER TA ON TQ.QSTN_SN = TA.QSTN_SN
+		WHERE TI.TEST_SN = #{testSn}
+	</select>
+</mapper>

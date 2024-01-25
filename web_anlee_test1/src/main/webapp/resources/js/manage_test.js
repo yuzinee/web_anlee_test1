@@ -29,7 +29,7 @@
 				
 				var html = "";	
 				
-				html += "<div class='d-flex text-body-secondary pt-3'>";
+				html += "<div class='d-flex text-body-secondary pt-3' onclick='item_onclick(this)' style='cursor:pointer'>";
 				html += "	<p class='pb-3 mb-0 small lh-sm border-bottom'>";
 				html += "		<input type='checkbox' class='checkbox-input' onclick='checkbox_onclick(this)' hidden>";
 				html += "		<strong class='d-block text-gray-dark' style='margin-bottom:5px'>"+arrTest[i].TEST_NM+"</strong>";
@@ -41,7 +41,7 @@
 				$("#"+useAt).append(html);
 			}
 			
-			// 맨 밑에 Text 추가
+			// Hide Management.. 추가
 			var htmlY = "";	
 			
 			htmlY += "<small class='d-block text-end mt-3'>";
@@ -60,6 +60,14 @@
 		});
 	}
 	
+	// 테스트 리스트 클릭
+	function item_onclick(e) {
+		var testSn = e.querySelector('input[type="text"]').value;	 // TEST_SN
+		
+		// 테스트 상세보기 이동
+		location.href = "/manage_detail?testSn=" + testSn;
+	}
+	
 	// Hide Management.. 클릭
 	function hide_manage_onclick(testInfo) {
 	    var hideBtn = $("#hideManage" + testInfo);
@@ -76,6 +84,13 @@
 	   	 	hideBtn.text("Save..");
 	    		testDiv.prop("hidden", false); 
 	    } else {
+	    		// 항목을 체크하지 않았을 경우
+	    		if(arrCheck.length == 0) {
+	    			alert("수정할 테스트를 선택해주세요.");
+	    			
+	    			return false;
+	    		}
+	    	
 	    		var params = {
 	    			"queryId"	: "manageTestDAO.updateUseAt"	// 쿼리 ID
 	    		  , "testSn"		: arrCheck						// TEST_SN 배열
