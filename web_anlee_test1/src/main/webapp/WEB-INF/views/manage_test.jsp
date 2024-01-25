@@ -16,12 +16,12 @@
 	      <h1 class="h6 mb-0 text-white lh-1">Test Manage</h1>
 	    </div>
 	  </div>
-	  <form class="card p-2">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Test Name">
-          <button type="submit" class="btn btn-secondary">Search</button>
-        </div>
-      </form>
+	
+      <div class="input-group">
+        <input type="text" class="form-control" id="inp_search" placeholder="Test Name">
+        <button  class="btn btn-secondary" onclick="search_test()">Search</button>
+      </div>
+
 	  <div class="my-3 p-3 bg-body rounded shadow-sm" id="testY">
 	    <h6 class="border-bottom pb-2 mb-0">Using Test</h6>
 	  </div>

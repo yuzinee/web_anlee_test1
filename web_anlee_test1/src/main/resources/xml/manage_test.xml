@@ -11,6 +11,9 @@
 		     , LAST_DT
 		     , USE_AT
 		FROM TB_INFO
+		<if test="searchNm != null and searchNm != ''">
+			WHERE TEST_NM LIKE CONCAT('%', #{searchNm}, '%')
+		</if>
 	</select>
 	
 	

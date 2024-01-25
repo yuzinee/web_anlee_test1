@@ -8,11 +8,12 @@
 	
 	// 테스트 조회
 	function search_test() {
-		var testParam = {
-			"queryId" : "manageTestDAO.selectTestList"	// 쿼리 ID
+		var testParams = {
+			"queryId"	: "manageTestDAO.selectTestList"	// 쿼리 ID
+		  , "searchNm"	: $("#inp_search").val().trim()
 		}
 		
-		com_selectList(testParam, function(testResult) {
+		com_selectList(testParams, function(testResult) {
 			$("#testY").children().not("h6").remove();	// testY 하위 컴포넌트 비우기(h6 제외)
 			$("#testN").children().not("h6").remove();	// testN 하위 컴포넌트 비우기(h6 제외)
 			

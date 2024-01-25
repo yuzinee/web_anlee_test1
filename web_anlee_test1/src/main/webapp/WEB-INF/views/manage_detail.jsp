@@ -46,7 +46,7 @@
 	    </div>
 	    <div class="row g-5">
 	      <div class="col-md-5 col-lg-4 order-md-last">
-	        <h4 style="margin-bottom:15px">Title</h4>
+	        <h4 style="margin-bottom:15px">Question status</h4>
 	        <ul class="list-group mb-3">
 	          <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
 	            <div class="text-success">
