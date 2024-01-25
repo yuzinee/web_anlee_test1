@@ -1,3 +1,4 @@
+	
 	var qstnNum = 1; // 질문 수
 	
 	// 페이지 로드 시
@@ -12,39 +13,39 @@
 	    var html = "";
 		
 	    html += "<div class='col-12' style='margin-bottom:15px'>"
-	    html += "<label class='form-label'>Question"+qstnNum+"</label>"
-	    html += "<input type='text' class='form-control' id='inp_question"+qstnNum+"' name='inp_question'>"
+	    html += "	<label class='form-label'>Question"+qstnNum+"</label>"
+	    html += "	<input type='text' class='form-control' id='inp_question"+qstnNum+"' name='inp_question'>"
 	    html += "</div>"
 	    html += "<div class='col-12' style='margin-bottom:15px'>"
-	    html += "<label class='form-label'>Answers</label>"
-	    html += "<div style='display: flex; justify-content: space-between; width: 100%;'>"
-	    html += "<input type='text' class='form-control' id='inp_answer"+qstnNum+"_1' name='inp_answer1' style='width:80%'>"
-	    html += "<select type='text' class='form-control' id='sbx_answer"+qstnNum+"_1' name='sbx_answer1' placeholder='1234 Main St' required='' style='width:20%' onchange='inp_answer1_onchange(this)'>"
-	    html += "<option>E</option>"
-	    html += "<option>I</option>"
-	    	html += "<option>S</option>"
-    		html += "<option>N</option>"
- 		html += "<option>F</option>"
-		html += "<option>T</option>"
-		html += "<option>J</option>"
-		html += "<option>P</option>"
-	    html += "</select>"
-	    html += "</div>"
+	    html += "	<label class='form-label'>Answers</label>"
+	    html += "	<div style='display: flex; justify-content: space-between; width: 100%;'>"
+	    html += "		<input type='text' class='form-control' id='inp_answer"+qstnNum+"_1' name='inp_answer1' style='width:80%'>"
+	    html += "		<select type='text' class='form-control' id='sbx_answer"+qstnNum+"_1' name='sbx_answer1' placeholder='1234 Main St' required='' style='width:20%' onchange='inp_answer1_onchange(this)'>"
+	    html += "			<option>E</option>"
+	    html += "			<option>I</option>"
+	    	html += "			<option>S</option>"
+    		html += "			<option>N</option>"
+ 		html += "			<option>F</option>"
+		html += "			<option>T</option>"
+		html += "			<option>J</option>"
+		html += "			<option>P</option>"
+	    html += "		</select>"
+	    html += "	</div>"
 	    html += "</div>"
 	    html += "<div class='col-12' style='margin-bottom:15px'>"
-	    html += "<div style='display: flex; justify-content: space-between; width: 100%;'>"
-	    html += "<input type='text' class='form-control' id='inp_answer"+qstnNum+"_2' name='inp_answer2' style='width:80%'>"
-	    html += "<select type='text' class='form-control' id='sbx_answer"+qstnNum+"_2' name='sbx_answer2' placeholder='1234 Main St' required='' style='width:20%' disabled>"
-	    html += "<option>E</option>"
-	    html += "<option selected>I</option>"
-	    	html += "<option>S</option>"
-    		html += "<option>N</option>"
- 		html += "<option>F</option>"
-		html += "<option>T</option>"
-		html += "<option>J</option>"
-		html += "<option>P</option>"
-	    html += "</select>"
-	    html += "</div>"
+	    html += "	<div style='display: flex; justify-content: space-between; width: 100%;'>"
+	    html += "		<input type='text' class='form-control' id='inp_answer"+qstnNum+"_2' name='inp_answer2' style='width:80%'>"
+	    html += "		<select type='text' class='form-control' id='sbx_answer"+qstnNum+"_2' name='sbx_answer2' placeholder='1234 Main St' required='' style='width:20%' disabled>"
+	    html += "			<option>E</option>"
+	    html += "			<option selected>I</option>"
+	    	html += "			<option>S</option>"
+    		html += "			<option>N</option>"
+ 		html += "			<option>F</option>"
+		html += "			<option>T</option>"
+		html += "			<option>J</option>"
+		html += "			<option>P</option>"
+	    html += "		</select>"
+	    html += "	</div>"
 	    html += "</div>"
 	
 	    $("#grp_testInfo").append(html);
@@ -178,7 +179,7 @@
 		});
 		
 		// 유효성 검사
-//		check_info();
+		check_info();
 	}
 	
 	// 유효성 검사

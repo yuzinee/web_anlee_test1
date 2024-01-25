@@ -12,4 +12,14 @@
 		     , USE_AT
 		FROM TB_INFO
 	</select>
+	
+	
+	<update id="manageTestDAO.updateUseAt">
+            UPDATE TB_INFO
+            SET USE_AT = #{useAt}
+            WHERE TEST_SN IN
+			<foreach item="item" collection="testSn" open="(" separator="," close=")">
+				 #{item}
+			</foreach>
+    </update>
 </mapper>
