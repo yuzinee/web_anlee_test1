@@ -8,9 +8,9 @@
 	<!-- DB -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
         <property name="driverClass" value="org.mariadb.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mariadb://localhost:3306/test"></property>
+        <property name="url" value="jdbc:mariadb://localhost:3306/anlee"></property>
         <property name="username" value="root"></property>
-        <property name="password" value="10041004"></property>
+        <property name="password" value="1234"></property>
     </bean>
     
     <!-- transaction manager, use JtaTransactionManager for global tx -->
