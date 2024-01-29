@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
       cardContainer.innerHTML = createTest(arrTest.TEST_SN, arrTest.TEST_NM, "", "");
     });
   }
-
   // search_test 함수 호출
   search_test();
 });

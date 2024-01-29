@@ -11,7 +11,8 @@
 </head>
 <body>
 
-  <div id="testEntrance"></div>
+  <div id="testEntrance">
+  </div>
 
 </body>
 </html>
