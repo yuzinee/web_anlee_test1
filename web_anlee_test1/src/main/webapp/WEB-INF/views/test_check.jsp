@@ -18,8 +18,8 @@
     </div>	
     <div class="grp_border_box">
       <div class="border_box" id="question" style="">Question</div>
-      <button type="button" class="button btnPush btn_style1" id="answer1" onclick="btn_answer_onclick(1)" style="width:30%;">A1</button>
-      <button type="button" class="button btnPush btn_style1" id="answer2" onclick="btn_answer_onclick(2)" style="width:30%;">A2</button>
+      <button type="button" class="button btnPush btn_style1" id="answer1" onclick="btn_answer_onclick(this.value)" style="width:30%;">A1</button>
+      <button type="button" class="button btnPush btn_style1" id="answer2" onclick="btn_answer_onclick(this.value)" style="width:30%;">A2</button>
       <button type="button" class="button btnPush btn_style1" id="btn_result" onclick="btn_result_onclick()" style="width:30%;">결과 확인하러 가기</button>
     </div>
     <input type="hidden" name="ibx_result" id="ibx_result" value=''>

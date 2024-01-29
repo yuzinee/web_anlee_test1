@@ -28,14 +28,5 @@
 <script>
 	// 파라미터로 받은 테스트 결과 변수
 	var questionResult = '<%= questionResult %>';
-	
-	var params = {
-			"queryId" : "testCheckDAO.selectQuestion"
-		  , "testSn" : "test3"
-		}
-		
-	com_selectOne(params, function(responseData) {
-		console.log(responseData);
-	});
 </script>
 </html>
