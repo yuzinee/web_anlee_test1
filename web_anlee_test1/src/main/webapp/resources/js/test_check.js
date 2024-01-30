@@ -7,8 +7,10 @@
 	
 	// 페이지 로드 시
 	$(document).ready(function() {
+		var testSn = sessionStorage.getItem("sessionInfo");
+
 		// session이 만료되었을 시 첫 페이지로 이동
-		if(sessionStorage.getItem("sessionInfo") != "Y") {
+		if(sessionStorage.getItem("sessionInfo") == null) {
 			//alert("잘못된 접근입니다.");
 			//location.href="/test_start";
 		
@@ -18,7 +20,7 @@
 		// 문항 조회
 		var qstnParams = {
 			"queryId" : "testCheckDAO.selectQuestionList"	// 쿼리 ID
-		  , "testSn" : "test2"								// 테스트 일련번호
+		  , "testSn" : testSn								// 테스트 일련번호
 		}
 		
 		com_selectList(qstnParams, function(e) {
@@ -43,6 +45,8 @@
 		
 		// 마지막 문항까지 선택했을 경우
 		if(currentNumber >= totalQuestions) {
+			cal_result();
+			
 			$("#question_num").text("결과");	// 문항 수
 			$("#question").hide();			// 질문
 			$("#answer1").hide();			// 답변1
@@ -129,3 +133,4 @@
 		
 		$("#ibx_result").val(result);
 	}
+	

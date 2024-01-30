@@ -26,7 +26,7 @@
   	String questionResult = request.getParameter("ibx_result");
 %>
 <script>
-	// 파라미터로 받은 테스트 결과 변수
-	var questionResult = '<%= questionResult %>';
+	var testSn = sessionStorage.getItem("sessionInfo");	// 테스트 일련번호
+	var questionResult = '<%= questionResult %>';		// 테스트 결과
 </script>
 </html>
